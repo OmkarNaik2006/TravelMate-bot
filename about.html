@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | TravelMate Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>About TravelMate Bot</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>What is TravelMate?</h2>
+    <p>
+      TravelMate Bot is your personal assistant for planning the perfect trip. 🌍  
+      Whether you love beaches, mountains, cities, or adventure travel, the bot guides you step by step to select the best destination.  
+      It considers season, mood, and interests to give personalized suggestions. 🏖️🏔️
+    </p>
+
+    <h2>Features</h2>
+    <ul>
+      <li>🤖 Chat-based destination recommendations</li>
+      <li>🌏 Multi-location selection</li>
+      <li>🗓 Suggestions by season, mood, and interest</li>
+      <li>🔄 Endless recommendations with feedback loop</li>
+    </ul>
+
+    <!-- IBM Watson Chatbot integration -->
+    <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "3e73b0d8-1e48-4b14-b989-4cd033f84928", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "43820a83-9a19-4025-af42-79b7f1c46670", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+  </div>
+</body>
+</html>

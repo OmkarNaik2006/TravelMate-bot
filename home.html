@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | TravelMate Bot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌍 TravelMate Bot</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html">Logout</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Welcome to TravelMate!</h2>
+    <p>
+      Not sure where to travel next? 🏝️ Our chatbot helps you find the perfect destination based on your mood, season, and interests.  
+      Click on the chatbot icon to start your journey! ✈️✨
+    </p>
+
+    <section class="destinations-section">
+      <h2>Popular Destinations 🌏</h2>
+      <div class="destinations-grid">
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Maldives">
+          <h3>Maldives</h3>
+          <p>Beach, Relaxation</p>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Swiss Alps">
+          <h3>Swiss Alps</h3>
+          <p>Mountain, Adventure</p>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Paris">
+          <h3>Paris</h3>
+          <p>City, Culture</p>
+        </div>
+        <div class="destination-card">
+          <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="Bali">
+          <h3>Bali</h3>
+          <p>Beach, Adventure</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- IBM Watson Chatbot integration -->
+    <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "3e73b0d8-1e48-4b14-b989-4cd033f84928", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "43820a83-9a19-4025-af42-79b7f1c46670", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+  </div>
+</body>
+</html>
